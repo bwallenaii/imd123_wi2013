@@ -1,0 +1,44 @@
+--gets a number from user, prints it back on screen
+
+START
+	number myNum = 0
+
+	get myNum
+	print myNum
+END
+
+
+--get two numbers from the user, output the larger one
+
+START
+
+	number num1 = 0;
+	number num2 = 0;
+
+	print "Give me two numbers"
+	get num1
+	get num2
+
+	if num1 < num2
+		print num2
+	else
+		print num1
+	endif
+END
+
+
+--Get files from disk and output them to screen
+
+START
+
+	file inputFile
+	string fileName
+	
+	while hasAnotherFile as fileName
+		readfile fileName into inputFile
+		print inputFile
+		close inputFile
+	endwhile
+
+END
+

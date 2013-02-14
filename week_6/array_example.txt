@@ -1,0 +1,13 @@
+--print out individual items of an array
+
+START
+
+	string statements[] = 
+		"Hello World!", 
+		"How are you?", 
+		"Me? I'm great!"
+	
+	for i = 0 to statements.length
+		print statements[i]
+	endfor
+END
