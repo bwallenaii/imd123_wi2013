@@ -1,0 +1,29 @@
+<html>
+<head>
+	<title>Object Example</title>
+	<script type="text/javascript">
+	var people = new Array(); //Objects
+	var person = new Object();
+	var keepGoing = true;
+
+	while(keepGoing)
+	{
+		person = new Object(); //may not be needed in psuedocde
+		person.firstName = prompt("What is your first name?");
+		person.lastName = prompt("What is your last name?");
+		person.phone = prompt("What is your phone number?");
+		person.empID = prompt("What is your employee ID?");
+
+		people.push(person);
+
+		keepGoing = confirm("Add another?"); //genrally ask for y/n
+	}
+
+	//Save people to disk. Except we can't do that, so we are going to . . .
+	console.log(people);
+	</script>
+</head>
+<body>
+
+</body>
+</html>

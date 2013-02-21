@@ -1,0 +1,11 @@
+
+person:Object = firstName:"Bob", lastName:"Andrews", age:39
+otherPerson:Object
+
+
+
+
+otherPerson.firstName = "Freddy"
+otherPerson.lastName = "Jones"
+
+=================================
