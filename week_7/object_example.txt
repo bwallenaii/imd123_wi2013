@@ -9,3 +9,23 @@ otherPerson.firstName = "Freddy"
 otherPerson.lastName = "Jones"
 
 =================================
+
+--Asks a person for some info about them, stores it in an object, then saves to disk
+
+
+START
+
+	person:Object
+
+	print "What is your first name?"
+	get person.firstName
+	print "What is your last name?"
+	get person.lastName
+	print "How old are you?"
+	get person.age
+	print "What is your social security number?"
+	print "Just kidding!"
+
+	writeFile person to "person.dat"
+
+END
