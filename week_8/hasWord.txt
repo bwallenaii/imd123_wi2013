@@ -1,0 +1,13 @@
+
+function hasWord(haystack:String, needle:String):Boolean
+	words[]:String = lowercase haystack as individual words
+	needle = lowercase needle
+
+	for i = 0 to words.length
+		if words[i] == needle
+			return true
+		end if
+	end for
+return false
+
+

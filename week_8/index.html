@@ -1,0 +1,32 @@
+<html>
+<head>
+	<title>Has Word Function</title>
+	<script type="text/javascript">
+	function hasWord(haystack, needle)
+	{
+		var words = haystack.toLowerCase().split(" ");
+		needle = needle.toLowerCase();
+
+		for(var i = 0; i < words.length;++i)
+		{
+			if(words[i] == needle)
+			{
+				return true;
+			}
+		}
+		return false;
+	}
+
+	var test1 = hasWord("There once was a dog and bingo was his name-o", "dog"); //true
+	var test2 = hasWord("There once was a dog and bingo was his name-o", "mcdonald"); //false
+	var test3 = hasWord("There once was a dog and bingo was his name-o", "there"); //true
+	var test4 = hasWord("There once was a dog and bingo was his name-o", "name"); //false
+	var test5 = hasWord("Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.", "laborum");//true
+
+	console.log(test1, test2, test3, test4, test5);
+	</script>
+</head>
+<body>
+Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+</body>
+</html>
