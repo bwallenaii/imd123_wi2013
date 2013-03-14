@@ -1,0 +1,61 @@
+<html>
+<head>
+	<title>Cup Game</title>
+	<script>
+		function getCup()
+		{
+			var cup = Math.ceil(Math.random() * 3);
+			return cup;
+		}
+
+		function getGuess()
+		{
+			var guess = "response"; //instead of defaulting to response, specify the data type as an int or number 
+			while(isNaN(guess) || (guess < 1 || guess > 3 ))
+			{
+				//remember that a prompt is technically a print followed by a get
+				guess = prompt("Which cup do you think the coin is under?\r\n(Use a number between 1 and 3)");
+				//the following is important in JS, but not needed in psuedo-code as long
+				//as you set your data types for your variables.
+				guess = Number(guess);
+			}
+
+			return guess;
+		}
+
+		//Program starts here
+		var coinInCup = 0;
+		var guess = 0;
+		var continuePlaying = true;
+		var games = 0;
+		var wins = 0;
+
+		alert("I have three cups and one coin. Guess which cup the coin is under.");
+
+		while(continuePlaying)
+		{
+			alert("*Scrambling cups*");
+			coinInCup = getCup();
+			guess = getGuess();
+			if(guess == coinInCup)
+			{
+				alert("Correct!");
+				wins++;
+			}
+			else
+			{
+				alert("Sorry it was under cup " + coinInCup);
+			}
+			games++;
+			//A confirm would be replaced by a print, and getting a y/n response
+			continuePlaying = confirm("Do you want to play again?");
+		}
+
+		alert("You won " + wins + " out of " + games + " tries.");
+		//program ends
+	</script>
+</head>
+<body>
+
+</body>
+</html>
